@@ -1,4 +1,4 @@
-package com.thinkimi.gradle
+package com.telenia.gradle
 
 import org.gradle.api.file.FileCollection
 import org.gradle.api.internal.ConventionTask
@@ -19,6 +19,7 @@ class MybatisGeneratorTask extends ConventionTask {
     def configFile
     def verbose
     def targetDir
+    def mybatisProperties
     FileCollection mybatisGeneratorClasspath
 
     @TaskAction
@@ -27,6 +28,9 @@ class MybatisGeneratorTask extends ConventionTask {
             ant.taskdef(name: 'mbgenerator', classname: 'org.mybatis.generator.ant.GeneratorAntTask')
 
             ant.properties['generated.source.dir'] = getTargetDir()
+            getMybatisProperties().each{key, val ->
+                ant.properties[key] = val
+            }
             ant.mbgenerator(overwrite: getOverwrite(), configfile: getConfigFile(), verbose: getVerbose())
         }
     }

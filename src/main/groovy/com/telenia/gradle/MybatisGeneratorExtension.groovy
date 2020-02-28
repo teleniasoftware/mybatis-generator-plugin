@@ -1,4 +1,4 @@
-package com.thinkimi.gradle
+package com.telenia.gradle
 
 import groovy.transform.ToString
 
@@ -12,5 +12,6 @@ class MybatisGeneratorExtension {
     def configFile = "generatorConfig.xml"
     def verbose = false
     def targetDir = "."
+    def mybatisProperties = []
 
 }

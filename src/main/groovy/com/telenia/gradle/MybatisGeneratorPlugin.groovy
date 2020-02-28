@@ -1,4 +1,5 @@
-package com.thinkimi.gradle
+package com.telenia.gradle
+
 
 import org.gradle.api.Plugin
 import org.gradle.api.internal.project.ProjectInternal
@@ -33,6 +34,7 @@ class MybatisGeneratorPlugin implements Plugin<ProjectInternal> {
             configFile = { project.mybatisGenerator.configFile }
             verbose = { project.mybatisGenerator.verbose }
             targetDir = { project.mybatisGenerator.targetDir }
+            mybatisProperties = {project.mybatisGenerator.mybatisProperties}
         }
     }
 

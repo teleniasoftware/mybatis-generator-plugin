@@ -1,7 +1,7 @@
-package com.thinkimi.gradle.dao;
+package com.telenia.gradle.dao;
 
-import com.thinkimi.gradle.model.Customer;
-import com.thinkimi.gradle.model.CustomerExample;
+import com.telenia.gradle.model.Customer;
+import com.telenia.gradle.model.CustomerExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

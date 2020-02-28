@@ -1,4 +1,4 @@
-package com.thinkimi.gradle.model;
+package com.telenia.gradle.model;
 
 public class Customer {
     private Integer id;

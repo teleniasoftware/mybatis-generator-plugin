@@ -1,4 +1,4 @@
-package com.thinkimi.gradle.model;
+package com.telenia.gradle.model;
 
 import java.util.ArrayList;
 import java.util.List;

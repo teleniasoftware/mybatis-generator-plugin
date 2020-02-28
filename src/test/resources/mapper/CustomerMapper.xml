@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.thinkimi.gradle.dao.CustomerMapper">
-  <resultMap id="BaseResultMap" type="com.thinkimi.gradle.model.Customer">
+<mapper namespace="com.telenia.gradle.dao.CustomerMapper">
+  <resultMap id="BaseResultMap" type="com.telenia.gradle.model.Customer">
     <id column="id" jdbcType="integer" property="id" />
     <result column="name" jdbcType="varchar" property="name" />
   </resultMap>
@@ -66,7 +66,7 @@
   <sql id="Base_Column_List">
     id, name
   </sql>
-  <select id="selectByExample" parameterType="com.thinkimi.gradle.model.CustomerExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.telenia.gradle.model.CustomerExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -90,17 +90,17 @@
     delete from customer
     where id = #{id,jdbcType=integer}
   </delete>
-  <delete id="deleteByExample" parameterType="com.thinkimi.gradle.model.CustomerExample">
+  <delete id="deleteByExample" parameterType="com.telenia.gradle.model.CustomerExample">
     delete from customer
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.thinkimi.gradle.model.Customer">
+  <insert id="insert" parameterType="com.telenia.gradle.model.Customer">
     insert into customer (id, name)
     values (#{id,jdbcType=integer}, #{name,jdbcType=varchar})
   </insert>
-  <insert id="insertSelective" parameterType="com.thinkimi.gradle.model.Customer">
+  <insert id="insertSelective" parameterType="com.telenia.gradle.model.Customer">
     insert into customer
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -119,7 +119,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.thinkimi.gradle.model.CustomerExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.telenia.gradle.model.CustomerExample" resultType="java.lang.Long">
     select count(*) from customer
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -147,7 +147,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.thinkimi.gradle.model.Customer">
+  <update id="updateByPrimaryKeySelective" parameterType="com.telenia.gradle.model.Customer">
     update customer
     <set>
       <if test="name != null">
@@ -156,12 +156,12 @@
     </set>
     where id = #{id,jdbcType=integer}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.thinkimi.gradle.model.Customer">
+  <update id="updateByPrimaryKey" parameterType="com.telenia.gradle.model.Customer">
     update customer
     set name = #{name,jdbcType=varchar}
     where id = #{id,jdbcType=integer}
   </update>
-  <resultMap id="BaseResultMap" type="com.thinkimi.gradle.model.Customer">
+  <resultMap id="BaseResultMap" type="com.telenia.gradle.model.Customer">
     <id column="id" jdbcType="integer" property="id" />
     <result column="name" jdbcType="varchar" property="name" />
   </resultMap>
@@ -226,7 +226,7 @@
   <sql id="Base_Column_List">
     id, name
   </sql>
-  <select id="selectByExample" parameterType="com.thinkimi.gradle.model.CustomerExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.telenia.gradle.model.CustomerExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -250,17 +250,17 @@
     delete from customer
     where id = #{id,jdbcType=integer}
   </delete>
-  <delete id="deleteByExample" parameterType="com.thinkimi.gradle.model.CustomerExample">
+  <delete id="deleteByExample" parameterType="com.telenia.gradle.model.CustomerExample">
     delete from customer
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.thinkimi.gradle.model.Customer">
+  <insert id="insert" parameterType="com.telenia.gradle.model.Customer">
     insert into customer (id, name)
     values (#{id,jdbcType=integer}, #{name,jdbcType=varchar})
   </insert>
-  <insert id="insertSelective" parameterType="com.thinkimi.gradle.model.Customer">
+  <insert id="insertSelective" parameterType="com.telenia.gradle.model.Customer">
     insert into customer
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -279,7 +279,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.thinkimi.gradle.model.CustomerExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.telenia.gradle.model.CustomerExample" resultType="java.lang.Long">
     select count(*) from customer
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -307,7 +307,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.thinkimi.gradle.model.Customer">
+  <update id="updateByPrimaryKeySelective" parameterType="com.telenia.gradle.model.Customer">
     update customer
     <set>
       <if test="name != null">
@@ -316,12 +316,12 @@
     </set>
     where id = #{id,jdbcType=integer}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.thinkimi.gradle.model.Customer">
+  <update id="updateByPrimaryKey" parameterType="com.telenia.gradle.model.Customer">
     update customer
     set name = #{name,jdbcType=varchar}
     where id = #{id,jdbcType=integer}
   </update>
-  <resultMap id="BaseResultMap" type="com.thinkimi.gradle.model.Customer">
+  <resultMap id="BaseResultMap" type="com.telenia.gradle.model.Customer">
     <id column="id" jdbcType="integer" property="id" />
     <result column="name" jdbcType="varchar" property="name" />
   </resultMap>
@@ -386,7 +386,7 @@
   <sql id="Base_Column_List">
     id, name
   </sql>
-  <select id="selectByExample" parameterType="com.thinkimi.gradle.model.CustomerExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.telenia.gradle.model.CustomerExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -410,17 +410,17 @@
     delete from customer
     where id = #{id,jdbcType=integer}
   </delete>
-  <delete id="deleteByExample" parameterType="com.thinkimi.gradle.model.CustomerExample">
+  <delete id="deleteByExample" parameterType="com.telenia.gradle.model.CustomerExample">
     delete from customer
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.thinkimi.gradle.model.Customer">
+  <insert id="insert" parameterType="com.telenia.gradle.model.Customer">
     insert into customer (id, name)
     values (#{id,jdbcType=integer}, #{name,jdbcType=varchar})
   </insert>
-  <insert id="insertSelective" parameterType="com.thinkimi.gradle.model.Customer">
+  <insert id="insertSelective" parameterType="com.telenia.gradle.model.Customer">
     insert into customer
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -439,7 +439,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.thinkimi.gradle.model.CustomerExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.telenia.gradle.model.CustomerExample" resultType="java.lang.Long">
     select count(*) from customer
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -467,7 +467,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.thinkimi.gradle.model.Customer">
+  <update id="updateByPrimaryKeySelective" parameterType="com.telenia.gradle.model.Customer">
     update customer
     <set>
       <if test="name != null">
@@ -476,12 +476,12 @@
     </set>
     where id = #{id,jdbcType=integer}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.thinkimi.gradle.model.Customer">
+  <update id="updateByPrimaryKey" parameterType="com.telenia.gradle.model.Customer">
     update customer
     set name = #{name,jdbcType=varchar}
     where id = #{id,jdbcType=integer}
   </update>
-  <resultMap id="BaseResultMap" type="com.thinkimi.gradle.model.Customer">
+  <resultMap id="BaseResultMap" type="com.telenia.gradle.model.Customer">
     <id column="id" jdbcType="integer" property="id" />
     <result column="name" jdbcType="varchar" property="name" />
   </resultMap>
@@ -546,7 +546,7 @@
   <sql id="Base_Column_List">
     id, name
   </sql>
-  <select id="selectByExample" parameterType="com.thinkimi.gradle.model.CustomerExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.telenia.gradle.model.CustomerExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -570,17 +570,17 @@
     delete from customer
     where id = #{id,jdbcType=integer}
   </delete>
-  <delete id="deleteByExample" parameterType="com.thinkimi.gradle.model.CustomerExample">
+  <delete id="deleteByExample" parameterType="com.telenia.gradle.model.CustomerExample">
     delete from customer
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.thinkimi.gradle.model.Customer">
+  <insert id="insert" parameterType="com.telenia.gradle.model.Customer">
     insert into customer (id, name)
     values (#{id,jdbcType=integer}, #{name,jdbcType=varchar})
   </insert>
-  <insert id="insertSelective" parameterType="com.thinkimi.gradle.model.Customer">
+  <insert id="insertSelective" parameterType="com.telenia.gradle.model.Customer">
     insert into customer
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -599,7 +599,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.thinkimi.gradle.model.CustomerExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.telenia.gradle.model.CustomerExample" resultType="java.lang.Long">
     select count(*) from customer
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -627,7 +627,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.thinkimi.gradle.model.Customer">
+  <update id="updateByPrimaryKeySelective" parameterType="com.telenia.gradle.model.Customer">
     update customer
     <set>
       <if test="name != null">
@@ -636,7 +636,7 @@
     </set>
     where id = #{id,jdbcType=integer}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.thinkimi.gradle.model.Customer">
+  <update id="updateByPrimaryKey" parameterType="com.telenia.gradle.model.Customer">
     update customer
     set name = #{name,jdbcType=varchar}
     where id = #{id,jdbcType=integer}

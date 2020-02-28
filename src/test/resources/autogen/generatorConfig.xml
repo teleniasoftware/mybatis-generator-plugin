@@ -17,11 +17,11 @@
         <jdbcConnection
                 driverClass="org.postgresql.Driver"
                 connectionURL="jdbc:postgresql://localhost:5432/postgres"
-                userId="thinkimi"
+                userId="telenia"
                 password="123456">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.thinkimi.gradle.model" targetProject="src/test/groovy">
+        <javaModelGenerator targetPackage="com.telenia.gradle.model" targetProject="src/test/groovy">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -30,7 +30,7 @@
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.thinkimi.gradle.dao" type="XMLMAPPER" targetProject="src/test/groovy">
+        <javaClientGenerator targetPackage="com.telenia.gradle.dao" type="XMLMAPPER" targetProject="src/test/groovy">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
