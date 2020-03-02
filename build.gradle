@@ -22,6 +22,7 @@ description "Mybatis Gradle Generator Plugin"
 
 apply plugin: 'groovy'
 apply plugin: 'idea'
+apply plugin: 'maven-publish'
 apply plugin: "com.gradle.plugin-publish"
 // this is for test
 //apply plugin: "com.telenia.gradle.MybatisGenerator"
@@ -57,6 +58,14 @@ pluginBundle {
         MybatisGenerator {
             id = 'com.telenia.gradle.MybatisGenerator'
             displayName = 'Mybatis Gradle Generator Plugin'
+        }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
         }
     }
 }
