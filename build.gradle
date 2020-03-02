@@ -17,7 +17,7 @@ plugins {
 }
 
 group 'com.telenia.gradle'
-version '2.1.4'
+version '2.1.5'
 description "Mybatis Gradle Generator Plugin"
 
 apply plugin: 'groovy'

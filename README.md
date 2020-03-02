@@ -24,7 +24,7 @@ In your ```build.gradle``` file, add following plugin in two ways:
 
 ``` groovy
 plugins {
-  id "com.telenia.gradle.MybatisGenerator" version "2.1.4"
+  id "com.telenia.gradle.MybatisGenerator" version "2.1.5"
 }
 ```
 
@@ -37,7 +37,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.com.telenia.gradle:mybatis-generator-plugin:2.1.4"
+    classpath "gradle.plugin.com.telenia.gradle:mybatis-generator-plugin:2.1.5"
   }
 }
 
@@ -54,7 +54,7 @@ configurations {
 mybatisGenerator {
     verbose = true
     configFile = 'src/main/resources/autogen/generatorConfig.xml'
-    
+    mybatisProperties = ['key1' : "value1",'key2' : "value2"]
     // optional, here is the override dependencies for the plugin or you can add other database dependencies.
     dependencies {
         mybatisGenerator 'org.mybatis.generator:mybatis-generator-core:1.3.7'
